@@ -17,13 +17,52 @@ composer require restyler/amazon-scraper
 use AmazonScraper\Client;
 
 $amazonClient = new Client([
-        'rapidapi_key' => 'YOUR-RAPID-API_KEY'
+        'rapidapi_key' => 'YOUR-RAPIDAPI-KEY'
     ]
 );
 
 $response = $amazonClient->getProductDetails([
     'asin' => 'B07XQXZXJC',
     'country' => 'US'
+]);
+
+print_r($response);
+
+```
+
+### getProductReviews(): Get product reviews by ASIN
+```php
+use AmazonScraper\Client;
+
+$amazonClient = new Client([
+        'rapidapi_key' => 'YOUR-RAPIDAPI-KEY'
+    ]
+);
+
+$response = $amazonClient->getProductReviews([
+    'asin' => 'B07XQXZXJC',
+    'country' => 'US',
+    'page' => 1, // pagination starts from page#1
+    'sort_by' => 'recent' // 'recent' or 'helpful'
+]);
+
+print_r($response);
+
+```
+
+### searchProducts(): Search products by keyword
+```php
+use AmazonScraper\Client;
+
+$amazonClient = new Client([
+        'rapidapi_key' => 'YOUR-RAPIDAPI-KEY'
+    ]
+);
+
+$response = $amazonClient->searchProducts([
+    'query' => 'xbox',
+    'country' => 'US',
+    'page' => 2, // pagination starts from page#1
 ]);
 
 print_r($response);

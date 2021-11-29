@@ -21,7 +21,7 @@ try {
     echo '<h2>Product details for asin B07XQXZXJC:</h2><pre>';
     print_r($response);
     echo '</pre>';
-    
+
     #########################
     ### get product reviews
     #########################
@@ -50,18 +50,6 @@ try {
     print_r($response);
     echo '</pre>';
     exit();
-
-    #########################
-    ### get music information
-    #########################
-    $response = $client->getMusicInfo([
-        'url' => 'https://www.tiktok.com/music/Bad-Liar-6613051741099280390?lang=en'
-    ]);
-
-    
-    echo '<h2>Music metadata by URL:</h2><pre>';
-    print_r($response);
-    echo '</pre>';
 
 
 
