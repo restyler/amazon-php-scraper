@@ -319,7 +319,7 @@ response will contain:
 
 
 ## Proxy Support
-This RapidAPI API uses a network of proxies so you don't need to manage proxies manually.
+[This solution uses a network of proxies](https://rapidapi.com/restyler/api/amazon23) so you don't need to manage proxies manually.
 
 ## Examples, Error Handling
 See full example file [here](examples/index.php).
