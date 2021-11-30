@@ -218,7 +218,102 @@ $response = $amazonClient->searchProducts([
     'page' => 2, // pagination starts from page#1
 ]);
 
-print_r($response);
+echo json_encode($response);
+
+/*
+response will contain:
+{
+  "totalProducts": 0,
+  "category": "aps",
+  "result": [
+    {
+      "position": { "page": 1, "position": 1, "global_position": 1 },
+      "asin": "B09BJ1V35W",
+      "price": {
+        "discounted": false,
+        "current_price": 17.99,
+        "currency": "USD",
+        "before_price": 0,
+        "savings_amount": 0,
+        "savings_percent": 0
+      },
+      "reviews": { "total_reviews": 124, "rating": 4.5 },
+      "url": "https://www.amazon.com/dp/B09BJ1V35W",
+      "score": "558.00",
+      "sponsored": false,
+      "amazonChoice": false,
+      "bestSeller": false,
+      "amazonPrime": false,
+      "title": "Sponsored Ad - EooCoo Compatible with MacBook Air 13 inch Case 2021 2020 2019 2018 M1 A2337 A2179 A1932 with Retina Displa...",
+      "thumbnail": "https://m.media-amazon.com/images/I/71veZ8Hq-oL._AC_UY218_.jpg"
+    },
+    {
+      "position": { "page": 1, "position": 2, "global_position": 2 },
+      "asin": "B08SJSZGB5",
+      "price": {
+        "discounted": false,
+        "current_price": 28.8,
+        "currency": "USD",
+        "before_price": 0,
+        "savings_amount": 0,
+        "savings_percent": 0
+      },
+      "reviews": { "total_reviews": 482, "rating": 4.6 },
+      "url": "https://www.amazon.com/dp/B08SJSZGB5",
+      "score": "2217.20",
+      "sponsored": false,
+      "amazonChoice": false,
+      "bestSeller": false,
+      "amazonPrime": false,
+      "title": "Sponsored Ad - Batianda for MacBook Air 13 inch Case A2337 M1 A2179 A1932 (2020 2019 2018 Release) with Touch ID, Heavy Du...",
+      "thumbnail": "https://m.media-amazon.com/images/I/61fb3jeOUsL._AC_UY218_.jpg"
+    },
+    {
+      "position": { "page": 1, "position": 3, "global_position": 3 },
+      "asin": "B08N5M9XBS",
+      "price": {
+        "discounted": false,
+        "current_price": 0,
+        "currency": "USD",
+        "before_price": 0,
+        "savings_amount": 0,
+        "savings_percent": 0
+      },
+      "reviews": { "total_reviews": 10850, "rating": 4.8 },
+      "url": "https://www.amazon.com/dp/B08N5M9XBS",
+      "score": "52080.00",
+      "sponsored": false,
+      "amazonChoice": false,
+      "bestSeller": false,
+      "amazonPrime": false,
+      "title": "2020 Apple MacBook Air Laptop: Apple M1 Chip, 13\u201d Retina Display, 8GB RAM, 512GB SSD Storage, Backlit Keyboard, FaceTime H...",
+      "thumbnail": "https://m.media-amazon.com/images/I/71vFKBpKakL._AC_UY218_.jpg"
+    },
+    {
+      "position": { "page": 1, "position": 4, "global_position": 4 },
+      "asin": "B08YCXXJFV",
+      "price": {
+        "discounted": false,
+        "current_price": 1449,
+        "currency": "USD",
+        "before_price": 0,
+        "savings_amount": 0,
+        "savings_percent": 0
+      },
+      "reviews": { "total_reviews": 11, "rating": 4.3 },
+      "url": "https://www.amazon.com/dp/B08YCXXJFV",
+      "score": "47.30",
+      "sponsored": false,
+      "amazonChoice": false,
+      "bestSeller": false,
+      "amazonPrime": false,
+      "title": "Apple MacBook Air 13.3\" with Retina Display, M1 Chip with 8-Core CPU and 8-Core GPU, 16GB Memory, 512GB SSD, Space Gray, L...",
+      "thumbnail": "https://m.media-amazon.com/images/I/51cND46Q0VL._AC_UY218_.jpg"
+    }
+  ]
+}
+
+*/
 
 ```
 
